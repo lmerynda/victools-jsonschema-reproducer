@@ -13,7 +13,7 @@ plugins {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
 }
 
@@ -24,12 +24,13 @@ repositories {
 }
 
 dependencies {
-    implementation("com.fasterxml.jackson.core:jackson-core:2.15.2")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
-    implementation("com.github.victools:jsonschema-generator:4.31.1")
-    implementation("org.json:json:20230618")
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    implementation("com.fasterxml.jackson.core:jackson-core:2.22.4")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.22.4")
+    implementation("com.github.victools:jsonschema-generator:4.38.0")
+    implementation("org.json:json:20260814")
+    testImplementation(platform("org.junit:junit-bom:5.14.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 application {
